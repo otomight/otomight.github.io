@@ -1,0 +1,30 @@
+#modal-overlay {
+	display:			flex;
+	position:			fixed;
+	width:				100vw;
+	height:				100vh;
+	justify-content:	center;
+	align-items:		center;
+	z-index:			1000;
+	visibility:			hidden;
+}
+
+#modal-overlay .show {
+	visibility:	visible;
+}
+
+#modal {
+	display:			flex;
+	justify-content:	center;
+	align-items:		center;
+	background-color:	#333333;
+	z-index:			1010;
+	width:				60%;
+	height:				80%;
+	border-radius:		0.5rem;
+
+	img {
+		max-height:	85%;
+	}
+}
+

@@ -1,13 +1,22 @@
-// @use ""
+@use "images/images.scss";
+@use "images/modal.scss";
+
+* {
+	margin:			0;
+	padding:		0;
+	box-sizing:		border-box;
+	font-family:	sans-serif;
+}
 
 body {
-	background-color:	black;
+	display:			flex;
+	justify-content:	center;
+	background-color:	rgb(43, 43, 43);
 	color:				white;
 }
 
-h1 {
-	height:				90vh;
+main {
 	display:			flex;
 	justify-content:	center;
-	align-items:		center;
+	width:				70%;
 }
