@@ -1,0 +1,69 @@
+.container {
+	display: flex;
+	height: 100vh;
+}
+
+.sidebar {
+	width: 220px;
+	background-color: #222;
+	color: white;
+	padding: 2rem;
+	position: fixed;
+	height: 100%;
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	li {
+		margin-bottom: 1rem;
+	}
+
+	a, .dropdownTitle {
+		color: #ccc;
+		text-decoration: none;
+
+		&:hover {
+			color: white;
+		}
+	}
+
+	.dropdown {
+		position: relative;
+
+		.dropdownTitle {
+			background: none;
+			border: none;
+			cursor: pointer;
+			font-size: 1rem;
+			text-align: left;
+		}
+
+		.submenu {
+			list-style: none;
+			padding-left: 1rem;
+			margin-top: 0.5rem;
+
+			li {
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+
+}
+
+.mainContent {
+	margin-left: 220px;
+	padding: 2rem;
+	overflow-y: auto;
+	flex: 1;
+}
+
+.section {
+	display: none;
+}
+
+.section:target {
+	display: block;
+}

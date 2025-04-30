@@ -1,21 +1,6 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./styles/main.scss";
-
-const geistSans = Geist({
-	variable: "--font-geist-sans",
-	subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
-	subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-	title: "My Portfolio",
-	description: "My Portfolio",
-};
+import "@/app/styles/globals.scss";
+import styles from "@/app/styles/layout.module.scss";
+import Sidebar from "./components/Sidebar";
 
 export default function RootLayout({
 	children,
@@ -24,8 +9,11 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${geistSans.variable} ${geistMono.variable}`}>
-				{children}
+			<body>
+				<div className={styles.container}>
+					<Sidebar />
+					<main className={styles.mainContent}>{children}</main>
+				</div>
 			</body>
 		</html>
 	);
