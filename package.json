@@ -1,18 +1,23 @@
 {
-  "name": "vite-project",
+  "name": "otomight.github.io",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sass": "^1.87.0"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0",
-    "sass": "^1.83.4",
-    "typescript": "~5.6.2",
-    "vite": "^6.0.5"
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
   }
 }
