@@ -1,11 +1,9 @@
-interface ContactSectionProps {
-	styleClass: string;
-	id: string;
-}
+import styles from "@/app/styles/layout.module.scss"
+import { PAGE_IDS } from "../lib/contants";
 
-const ContactSection = ({styleClass, id}: ContactSectionProps) => {
+const ContactSection = () => {
 	return (
-		<section className={styleClass} id={id}>
+		<section className={styles.section} id={PAGE_IDS.contact}>
 			Contact
 		</section>
 	)

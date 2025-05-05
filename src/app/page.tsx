@@ -1,22 +1,22 @@
 "use client";
 
-import styles from "@/app/styles/layout.module.scss"
 import { useEffect } from "react";
 import ContactSection from "./sections/Contact";
 import HomeSection from "./sections/Home";
 import ProjectExampleSection from "./sections/ProjectExample";
+import { PAGE_IDS } from "./lib/contants";
 
 export default function Page() {
 	useEffect(() => {
 		if (!window.location.hash) {
-			window.location.replace("#home");
+			window.location.replace(`#${PAGE_IDS.home}`);
 		}
 	}, []);
 	return (
 		<>
-			<HomeSection styleClass={styles.section} id="home"/>
-			<ProjectExampleSection styleClass={styles.section} id="project-example"/>
-			<ContactSection styleClass={styles.section} id="contact"/>
+			<HomeSection />
+			<ProjectExampleSection />
+			<ContactSection />
 		</>
 	);
 }

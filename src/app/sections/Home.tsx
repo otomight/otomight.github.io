@@ -1,11 +1,9 @@
-interface HomeSectionProps {
-	styleClass: string;
-	id: string;
-}
+import styles from "@/app/styles/layout.module.scss"
+import { PAGE_IDS } from "../lib/contants";
 
-const HomeSection = ({styleClass, id}: HomeSectionProps) => {
+const HomeSection = () => {
 	return (
-		<section className={styleClass} id={id}>
+		<section className={styles.section} id={PAGE_IDS.home}>
 			Home
 		</section>
 	)

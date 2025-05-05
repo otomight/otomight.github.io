@@ -2,6 +2,7 @@
 
 import styles from "@/app/styles/layout.module.scss";
 import { useState } from "react";
+import { PAGE_IDS } from "../lib/contants";
 
 const Sidebar = () => {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -22,19 +23,19 @@ const Sidebar = () => {
 			</button>
 			<nav className={`${styles.sidebar} ${isSidebarOpen ? styles.openSidebar : styles.closedSidebar}`}>
 				<ul>
-					<li><a href="#home">Home</a></li>
+					<li><a href={`#${PAGE_IDS.home}`}>Home</a></li>
 					<li className={styles.dropdown}>
 						<button className={styles.dropdownTitle} onClick={toggleDropdown}>
 							Projects ▾
 						</button>
 						{isDropdownOpen && (
 							<ul className={styles.submenu}>
-								<li><a href="#project-example">Project Example</a></li>
+								<li><a href={`#${PAGE_IDS.projectExample}`}>Project Example</a></li>
 								<li><a href="#project2">Project 2</a></li>
 							</ul>
 						)}
 					</li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href={`#${PAGE_IDS.contact}`}>Contact</a></li>
 				</ul>
 			</nav>
 		</>

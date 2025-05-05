@@ -1,11 +1,9 @@
-interface ProjectExampleSectionProps {
-	styleClass: string;
-	id: string;
-}
+import styles from "@/app/styles/layout.module.scss"
+import { PAGE_IDS } from "../lib/contants";
 
-const ProjectExampleSection = ({styleClass, id}: ProjectExampleSectionProps) => {
+const ProjectExampleSection = () => {
 	return (
-		<section className={styleClass} id={id}>
+		<section className={styles.section} id={PAGE_IDS.projectExample}>
 			Project example
 		</section>
 	)
