@@ -1,15 +1,19 @@
 "use client";
 
 import styles from "@/app/styles/layout.module.scss";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { PAGE_IDS } from "../lib/contants";
 
-const Sidebar = () => {
-	const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+interface SidebarProps {
+	isOpen: boolean;
+	setIsOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+const Sidebar = (props: SidebarProps) => {
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
 	const toggleSidebar = () => {
-		setIsSidebarOpen(prev => !prev);
+		props.setIsOpen(prev => !prev);
 	}
 
 	const toggleDropdown = () => {
@@ -21,7 +25,7 @@ const Sidebar = () => {
 			<button className={styles.toggleSidebar} onClick={toggleSidebar}>
 				☰
 			</button>
-			<nav className={`${styles.sidebar} ${isSidebarOpen ? styles.openSidebar : styles.closedSidebar}`}>
+			<nav className={`${styles.sidebar} ${props.isOpen ? styles.openSidebar : styles.closedSidebar}`}>
 				<ul>
 					<li><a href={`#${PAGE_IDS.home}`}>Home</a></li>
 					<li className={styles.dropdown}>

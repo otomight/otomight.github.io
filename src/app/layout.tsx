@@ -1,6 +1,6 @@
 import "@/app/styles/globals.scss";
 import styles from "@/app/styles/layout.module.scss";
-import Sidebar from "./components/Sidebar";
+import Layout from "./components/Layout";
 
 export const metadata = {
 	title:	"otomight",
@@ -18,12 +18,7 @@ export default function RootLayout({
 		<html lang="en">
 			<body>
 				<div className={styles.container}>
-					<Sidebar />
-					<main className={styles.mainLayout}>
-						<div className={styles.mainContent}>
-							{children}
-						</div>
-					</main>
+					<Layout children={children}/>
 				</div>
 			</body>
 		</html>
