@@ -1,9 +1,9 @@
 import styles from "@/app/styles/layout.module.scss"
-import { PAGE_IDS } from "../lib/contants";
+import { PAGES } from "../lib/contants";
 
 const ContactSection = () => {
 	return (
-		<section className={styles.section} id={PAGE_IDS.contact}>
+		<section className={styles.section} id={PAGES.contact.id}>
 			Contact
 		</section>
 	)

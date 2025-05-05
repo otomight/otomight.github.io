@@ -98,5 +98,6 @@ $sidebarColor: #222;
 }
 
 .section:target {
-	display: block;
+	display: flex;
+	flex-direction: column;
 }
