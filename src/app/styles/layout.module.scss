@@ -3,11 +3,30 @@
 	height: 100vh;
 }
 
+.toggleSidebar {
+	position: fixed;
+	z-index: 1000;
+	background-color: #222;
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.openSidebar {
+	transform: translateX(0);
+}
+
+.closedSidebar {
+	transform: translateX(-100%);
+}
+
 .sidebar {
 	width: 220px;
 	background-color: #222;
 	color: white;
-	padding: 2rem;
+	padding: 4rem 2rem 2rem 2rem;
 	position: fixed;
 	height: 100%;
 
@@ -53,12 +72,19 @@
 
 }
 
-.mainContent {
-	margin-left: 220px;
-	padding: 2rem;
-	overflow-y: auto;
-	flex: 1;
+.mainLayout {
+	display: flex;
+	justify-content: center;
+	width: 100vw;
+
+	.mainContent {
+		max-width: 60vw;
+		padding: 2rem;
+		overflow-y: auto;
+		flex: 1;
+	}
 }
+
 
 .section {
 	display: none;
